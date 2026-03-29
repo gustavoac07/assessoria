@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ELO Assessoria Alimentar - Consultoria especializada em segurança alimentar, gestão de qualidade e conformidade sanitária para restaurantes e bares.">
+    <meta name="theme-color" content="#2D5016">
+    <title>ELO Assessoria Alimentar - Consultoria em Nutrição e Segurança Alimentar</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="carousel.css">
+    
+    <style>
+        
+        /* RESET CSS */
+        /* ===== QUEM SOMOS PADRÃO IGUAL SOBRE ===== */
+
+        .quem-somos {
+            padding: 120px 80px;
+            background: var(--branco);
+        }
+
+        .quem-somos h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--verde-escuro);
+            margin-bottom: 20px;
+            text-align: left; /* igual SOBRE */
+        }
+
+        .quem-somos p {
+            color: var(--cinza-escuro);
+            line-height: 1.8;
+            font-size: 16px;
+            text-align: justify; /* chave do alinhamento */
+            margin-bottom: 20px;
+        }
+
+        .quem-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* GRID DAS PESSOAS */
+        .quem-grid {
+            display: flex;
+            gap: 60px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* CARD */
+        .pessoa {
+            max-width: 280px;
+            text-align: center;
+        }
+
+        .pessoa img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .pessoa h3 {
+            margin-top: 12px;
+            font-family: 'Playfair Display', serif;
+            color: var(--verde-escuro);
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .quem-somos {
+                padding: 60px 20px;
+            }
+
+            .quem-somos h2 {
+                font-size: 32px;
+            }
+
+            .quem-grid {
+                justify-content: center;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+                .elo-diferencial {
+            background: #f9f7f2;
+            padding: 120px 80px;
+        }
+
+        .elo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .elo-texto h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: var(--verde-escuro);
+            margin-bottom: 25px;
+        }
+
+        .elo-texto p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .elo-imagem img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 10px;
+            margin-left: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+
+        .elo-imagem img:hover {
+            transform: scale(1.03);
+        }
+
+        :root {
+            --verde-escuro: #2D5016;
+            --dourado: #D4AF37;
+            --branco: #FFFFFF;
+            --cinza-escuro: #333333;
+            --cinza-claro: #F5F1E8;
+            --cinza-medio: #999999;
+            --verde-claro: #4A7C3B;
+            --laranja-suave: #E8A76F;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--cinza-escuro);
+            background-color: var(--branco);
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER E NAVEGAÇÃO ===== */
+        header {
+            position: relative;
+            top: 0;
+            width: 100%;
+            background-color: var(--branco);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-top {
+            background-color: var(--verde-escuro);
+            color: var(--branco);
+            padding: 8px 0;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .header-top a {
+            color: var(--branco);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .header-top a:hover {
+            color: var(--dourado);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--verde-escuro);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 170px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--cinza-escuro);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--dourado);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: var(--verde-escuro);
+            color: var(--branco);
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--dourado);
+            color: var(--verde-escuro);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--verde-escuro);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde-claro) 100%);
+            color: var(--branco);
+            padding: 80px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--dourado);
+            color: var(--verde-escuro);
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--branco);
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--branco);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--branco);
+            color: var(--verde-escuro);
+            transform: translateY(-3px);
+        }
+
+        /* ===== SEÇÃO SOBRE ===== */
+        .about {
+            padding: 140px 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 300px;
+            align-items: center;
+            
+        }
+
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--verde-escuro);
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: var(--cinza-escuro);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid var(--dourado);
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        /* ===== MISSÃO, VISÃO, VALORES ===== */
+        .values {
+            background-color: var(--cinza-claro);
+            padding: 100px 40px;
+            margin: 80px 0;
+        }
+
+        .values-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .values h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--verde-escuro);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .value-card {
+            background-color: var(--branco);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--dourado);
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .value-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--verde-escuro);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .value-card p {
+            color: var(--cinza-escuro);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* ===== SERVIÇOS ===== */
+        .services {
+            padding: 100px 40px;
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--verde-escuro);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background-color: var(--branco);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--dourado);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            font-size: 48px;
+            color: var(--verde-escuro);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--verde-escuro);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--cinza-escuro);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--verde-escuro);
+            color: var(--branco);
+            padding: 60px 40px 20px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--dourado);
+        }
+
+        .footer-section p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .footer-section a {
+            display: block;
+            color: var(--branco);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--dourado);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--dourado);
+            color: var(--verde-escuro);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 1024px) {
+            .nav-container {
+                padding: 15px 20px;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 20px;
+            }
+
+            .values {
+                padding: 60px 20px;
+            }
+
+            .services {
+                padding: 60px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .header-top a {
+                margin-left: 0;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+                margin-left: auto;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .hero {
+                margin-top: 60px;
+                padding: 60px 20px;
+                min-height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 20px;
+            }
+
+            .about-content h2 {
+                font-size: 32px;
+            }
+
+            .values {
+                padding: 60px 20px;
+                margin: 60px 0;
+            }
+
+            .values h2 {
+                font-size: 32px;
+            }
+
+            .services {
+                padding: 60px 20px;
+            }
+
+            .services h2 {
+                font-size: 32px;
+            }
+
+            footer {
+                padding: 40px 20px;
+            }
+
+            .footer-container {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .about-content h2,
+            .values h2,
+            .services h2 {
+                font-size: 26px;
+            }
+
+            .service-icon {
+                font-size: 36px;
+            }
+
+            .value-card h3,
+            .service-card h3 {
+                font-size: 18px;
+            }
+        }
+
+        /* ===== ANIMAÇÕES SCROLL ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== WHATSAPP FLUTUANTE ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 26px;
+            }
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .carousel img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel img.active {
+            opacity: 1;
+            z-index: 2;
+        }
+        .about-content p {
+    text-align: justify;
+    margin-bottom: 20px;}
+
+
+    /* ===== NOVA SEÇÃO ===== */
+    .quem-somos {
+        padding: 120px 80px;
+        background: #fff;
+        text-align: center;
+    }
+
+    .quem-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .quem-grid {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .pessoa {
+        max-width: 300px;
+    }
+
+    .pessoa img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    @media(max-width:768px){
+        .quem-somos{
+            padding:60px 20px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-top">
+            <div>
+                <a href="mailto:eloassessoriaalimentar@gmail.com">📧 contato@eloassessoria.com.br</a>
+            </div>
+            <div>
+                <a href="tel:+5511989217827">📞 (11) 98921-7827</a>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logo.jpeg" alt="ELO Assessoria Alimentar">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="navbar">
+                <a href="#quem-somos">Quem Somos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#valores">Valores</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a href="https://wa.me/5511989217827?text=Olá! Gostaria de conhecer mais sobre os serviços da ELO Assessoria Alimentar." class="btn-primary" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Segurança Alimentar é Nossa Missão</h1>
+            <p>Consultoria especializada em gestão de qualidade, conformidade sanitária e segurança alimentar para restaurantes, bares e cozinhas profissionais.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5511989217827?text=Olá! Gostaria de conhecer mais sobre os serviços da ELO Assessoria Alimentar." class="btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Fale Conosco
+                </a>
+                <a href="#sobre" class="btn-secondary">
+                    <i class="fas fa-arrow-down"></i> Saiba Mais
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔥 NOVA SEÇÃO INSERIDA AQUI -->
+<section id="quem-somos" class="quem-somos">
+
+    <div class="quem-container">
+
+        <h2>Quem Somos</h2>
+
+        <p style="max-width:700px;margin:20px auto;">
+            Quem está por trás da Elo?
+        </p>
+        <p style="max-width:700px;margin:20px auto;">
+        ​A Elo Assessoria Alimentar nasceu da união de duas profissionais apaixonadas pela ciência dos alimentos e pela segurança do consumidor.
+        </p>
+
+        <div class="quem-grid">
+
+            <div class="pessoa">
+                <img src="janiele.jpeg">
+                <h3>Janiele Carvalho</h3>
+            </div>
+            <p>Nutricionista com anos de vivência prática em rotinas hospitalares e gestão de unidades de alimentação
+            </p>
+
+            <div class="pessoa">
+                <img src="giovana.jpeg">
+                <h3>Geovana Rodrigues</h3>
+            </div>
+            <p>Nutricionista e parceira estratégica, para criar uma consultoria que entende os desafios reais do dia a dia de uma cozinha profissional.
+            </p>
+
+        </div>
+
+        <div style="max-width:800px;margin:40px auto;text-align:justify;">
+            <p>
+                Juntas, Janiele e Geovana acreditam que a segurança alimentar é o "elo" que conecta a saúde do cliente ao sucesso de um negócio. Com uma base técnica forte e atendimento personalizado, elas lideram a Elo para oferecer mais do que auditorias: entregam soluções práticas em controle de qualidade e gestão de alimentos.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about" id="sobre">
+    <div class="about-content">
+
+        <!-- SOBRE -->
+        <h2>Sobre a ELO</h2>
+
+        <p><strong>Missão:</strong> Prover soluções técnicas em segurança alimentar que garantam a excelência dos serviços de nossos parceiros, protegendo a saúde do consumidor e potencializando a eficiência operacional através de consultoria especializada e humanizada.</p>
+
+        <p><strong>Visão:</strong> Ser referência nacional em gestão de qualidade e conformidade sanitária, reconhecida por transformar normas técnicas em processos simples, seguros e rentáveis para o setor de alimentação.</p>
+
+        <p>
+            Com anos de experiência no mercado, nossa equipe de especialistas trabalha para garantir que seu estabelecimento atenda aos mais altos padrões de segurança alimentar e conformidade regulatória.
+        </p>
+
+        <br><br>
+
+        <!-- OBJETIVO -->
+        <h2>Proteja sua reputação e otimize sua operação</h2>
+
+        <p>
+            No setor alimentar, a confiança é o ingrediente principal. A Elo surge para oferecer a tranquilidade que todo gestor precisa diante das rigorosas normas da vigilância sanitária.
+        </p>
+
+        <p>
+            Através de uma assessoria personalizada, implementamos processos inteligentes que elevam o padrão de higiene e organização, evitando multas e garantindo uma gestão eficiente dos insumos.
+        </p>
+
+        <p>
+            Ter a Elo ao seu lado é investir na sustentabilidade e na credibilidade da sua marca.
+        </p>
+
+    </div>
+
+    <!-- CARROSSEL -->
+    <div class="about-image">
+        <div class="carousel">
+            <img src="img1.jpeg" class="active">
+            <img src="img2.jpeg">
+            <img src="img3.jpeg">
+            <img src="img4.jpeg">
+        </div>
+    </div>
+    
+</section>
+
+    <!-- SEÇÃO VALORES -->
+    <section class="values" id="valores">
+        <div class="values-container">
+            <h2>Nossos Valores</h2>
+            <div class="values-grid">
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-shield-alt"></i> Ética e Rigor Técnico</h3>
+                    <p>Compromisso inegociável com as normas de vigilância sanitária e a saúde pública. Cada decisão é fundamentada em expertise técnica e responsabilidade.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-handshake"></i> Parceria de Confiança</h3>
+                    <p>Ser o "elo" real com o cliente, oferecendo suporte próximo e soluções práticas que transformam desafios em oportunidades de crescimento.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-comments"></i> Transparência</h3>
+                    <p>Comunicação clara e objetiva sobre riscos, melhorias e processos. Você sempre saberá exatamente onde está e para onde vai.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-leaf"></i> Sustentabilidade Operacional</h3>
+                    <p>Foco na redução de desperdícios e na otimização de recursos dentro da cozinha, gerando eficiência e rentabilidade.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-book"></i> Educação Contínua</h3>
+                    <p>Acreditamos que o treinamento e o conhecimento são as melhores ferramentas para a segurança alimentar. Investimos em seu crescimento.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-check-circle"></i> Conformidade Garantida</h3>
+                    <p>Garantimos que seu estabelecimento esteja sempre em conformidade com as regulamentações sanitárias e legislação vigente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SERVIÇOS -->
+    <section class="services" id="servicos">
+        <div class="services-container">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <i class="fas fa-check-square service-icon"></i>
+                    <h3>Auditoria Sanitária</h3>
+                    <p>Avaliação completa de seu estabelecimento conforme normas ANVISA, identificando pontos críticos e oportunidades de melhoria.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-list service-icon"></i>
+                    <h3>Consultoria em Processos</h3>
+                    <p>Desenvolvimento e implementação de procedimentos operacionais padrão (POP) adequados à sua realidade operacional.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-users service-icon"></i>
+                    <h3>Treinamento de Equipe</h3>
+                    <p>Capacitação contínua de colaboradores em boas práticas de higiene, manipulação de alimentos e segurança alimentar.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3>Gestão de Qualidade</h3>
+                    <p>Implementação de sistemas de gestão de qualidade que garantem conformidade e melhoram a eficiência operacional.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-biohazard service-icon"></i>
+                    <h3>Análise de Risco</h3>
+                    <p>Identificação e avaliação de riscos biológicos, químicos e físicos em seus processos de produção.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-file-alt service-icon"></i>
+                    <h3>Documentação Técnica</h3>
+                    <p>Elaboração de toda documentação necessária para conformidade com órgãos reguladores e certificações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>ELO Assessoria Alimentar</h3>
+                <p>Consultoria especializada em segurança alimentar, gestão de qualidade e conformidade sanitária para o setor de alimentação.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/elo_assessoriaalimentar?igsh=MTJ3cXByeGM2bmZzNg==" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/elo-assessoria-alimentar-16a7733b8?" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navegação</h3>
+                <a href="#sobre">Sobre</a>
+                <a href="#valores">Valores</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><strong>Email:</strong></p>
+                <a href="mailto:eloassessoriaalimentar@gmail.com">eloassessoriaalimentar@gmail.com</a>
+                <p style="margin-top: 15px;"><strong>Telefone:</strong></p>
+                <a href="tel:+5511989217827">(11) 98921-7827</a>
+                <p style="margin-top: 15px;"><strong>WhatsApp:</strong></p>
+                <a href="https://wa.me/5511989217827" target="_blank">(11) 98921-7827</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 ELO Assessoria Alimentar. Todos os direitos reservados. | Desenvolvido com <span style="color: var(--dourado);">❤</span> para sua segurança alimentar.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5511989217827" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Menu Mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+
+        // Animações ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        
+    </script>
+    <script src="carousel.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+
+            const imagens = document.querySelectorAll('.carousel img');
+
+            if (imagens.length === 0) {
+                console.log("erro: imagens não encontradas");
+                return;
+            }
+
+            let index = 0;
+
+            setInterval(() => {
+                imagens[index].classList.remove('active');
+                index = (index + 1) % imagens.length;
+                imagens[index].classList.add('active');
+            }, 4000);
+
+        });
+    </script>
+</body>
+</html>
